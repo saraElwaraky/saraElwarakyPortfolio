@@ -1,10 +1,10 @@
 :root {
   --color-surface: #f1f1f1; /* Background / Sections */
-  --color-accent-light: #e9c234; /* Highlights / Hover */
+  --color-accent-light: #f6d55c; /* Highlights / Hover */
   --color-accent-main: #ed553b; /* Primary Buttons / CTA */
   --color-primary: #1d3557; /* Text / Headings */
-  --color-support: #a8d8b9; /* Cards / Secondary Areas */
-
+  --color-support: #c0e4cf; /* Cards / Secondary Areas */
+  --dd: #c0e4cf;
   /* ---------header colors ------------ */
   --color-header-bg: rgba(255, 255, 255, 0.7);
   --color-header-shadow: rgba(0, 0, 0, 0.05);

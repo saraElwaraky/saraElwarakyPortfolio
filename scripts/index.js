@@ -8,7 +8,7 @@ setInterval(() => {
   setTimeout(() => {
     cvBtn.classList.remove("dancing");
   }, 2000);
-}, 10000);
+}, 5000);
 
 // menu icon
 let menuIcon = document.querySelector("#menu-icon");
@@ -54,10 +54,13 @@ ScrollReveal({
   delay: 200,
 });
 ScrollReveal().reveal(".home-content,.heading,.about-img", { origin: "top" });
-ScrollReveal().reveal(".home-img,.portfolio-box,.contact form", {
-  origin: "bottom",
-});
-ScrollReveal().reveal(".home-content h1,.about-img", { origin: "left" });
+ScrollReveal().reveal(
+  ".home-img,.portfolio-box,.contact form,#contactAnimation",
+  {
+    origin: "bottom",
+  }
+);
+ScrollReveal().reveal(".home-content h1,.skills-content", { origin: "left" });
 ScrollReveal().reveal(".home-content p,.about-content", { origin: "right" });
 
 // typped js//////////////////////////////////////////////////
@@ -68,4 +71,39 @@ const typed = new Typed(".job-title", {
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
+});
+
+//lottie contact animation ///////////////////////////
+lottie.loadAnimation({
+  container: document.getElementById("arrow-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "/assets/imgs/ZwWru2tEpN.json",
+});
+lottie.loadAnimation({
+  container: document.getElementById("contactAnimation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "/assets/imgs/x3ke5axSda.json",
+});
+
+// ///////////////
+const form = document.querySelector(".contact form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  Swal.fire({
+    icon: "success",
+    title: "Thank you for your message :)",
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    position: "center",
+    background: "#4CAF50",
+    color: "#fff",
+  });
+
+  // إرسال البيانات هنا لو محتاج
 });
