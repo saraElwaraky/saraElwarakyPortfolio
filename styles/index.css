@@ -384,7 +384,7 @@ span {
   flex-direction: column;
   gap: rem;
   text-align: center;
-  background-color: color-mix(in srgb, var(--color-surface) 70%, transparent);
+  background-color: color-mix(in srgb, var(--color-support) 50%, transparent);
   border-radius: 2rem;
   margin: 1rem auto;
   margin-bottom: 3rem;
